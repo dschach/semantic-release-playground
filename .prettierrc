@@ -18,7 +18,7 @@
 		},
 		{
 			"files": "*.{yml,yaml}",
-			"options": { "tabWidth": 2 }
+			"options": { "tabWidth": 2, "useTabs": false }
 		},
 		{
 			"files": "docs/*.html",
