@@ -32,7 +32,7 @@
 		"version": "auto-changelog && git add CHANGELOG.md"
 	},
 	"devDependencies": {
-		"@lwc/eslint-plugin-lwc": "^1.5.1",
+		"@lwc/eslint-plugin-lwc": "^1.6.2",
 		"@prettier/plugin-xml": "^2.2.0",
 		"@salesforce/eslint-config-lwc": "^3.3.4",
 		"@salesforce/eslint-plugin-aura": "^2.1.0",
