@@ -71,6 +71,5 @@
 				"assets": ["CHANGELOG.md", "package.json", "package-lock.json", "npm-shrinkwrap.json", "force-app/**", "docs/**"]
 			}
 		]
-	],
-	"dryRun": true
+	]
 }
