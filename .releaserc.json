@@ -67,7 +67,7 @@
 					},
 					{
 						"type": "revert",
-						"release": false
+						"release": "patch"
 					},
 					{
 						"type": "chore",
