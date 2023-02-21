@@ -21,7 +21,7 @@
 				"releaseRules": [
 					{ "breaking": true, "release": "major" },
 					{ "scope": "no-release", "release": false },
-					{ "type": "build", "release": false },
+					{ "type": "build", "release": "patch" },
 					{ "type": "chore", "release": false },
 					{ "type": "ci", "release": false },
 					{ "type": "deps", "release": false },
