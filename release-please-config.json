@@ -1,7 +1,6 @@
 {
 	"packages": {
 		".": {
-			"changelog-path": "CHANGELOG.md",
 			"release-type": "simple",
 			"bump-minor-pre-major": false,
 			"bump-patch-for-minor-pre-major": false,
@@ -9,18 +8,19 @@
 			"prerelease": false
 		},
 		"force-app": {
-			"changelog-path": "CHANGELOG.md",
 			"release-type": "simple",
 			"bump-minor-pre-major": false,
 			"bump-patch-for-minor-pre-major": false,
 			"draft": false,
 			"prerelease": false,
-			"package-name": "srp"
+			"package-name": "srp-fa"
 		}
 	},
 	"$schema": "https://raw.githubusercontent.com/googleapis/release-please/main/schemas/config.json",
 	"extra-files": [{ "type": "json", "path": "package.json", "jsonpath": "$.version" }],
 	"plugins": [{ "type": "sentence-case" }],
+	"last-release-sha": "f0db478b042e2a672210d4ce44c8036aecc84933",
+	"changelog-path": "CHANGELOG.md",
 	"changelog-sections": [
 		{ "type": "feat", "section": "Features", "hidden": false },
 		{ "type": "build", "section": "Build System", "hidden": false },
