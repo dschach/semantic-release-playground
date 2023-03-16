@@ -28,13 +28,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 * Automate and simplify workflows ([91ff15b](https://github.com/dschach/semantic-release-playground/commit/91ff15bbe9c8ce908e87a2ae0ff501028c890b28))
 * **r-p:** Add GitHub token ([46b1c8c](https://github.com/dschach/semantic-release-playground/commit/46b1c8c9722cfec46537f8c2dd7817de7bf3da23))
 
-## [Unreleased](https://github.com/dschach/semantic-release-playground/compare/v1.0.0...HEAD)
-
-### Commits
-
-- fix(auto-changelog): include commits [`aaf9206`](https://github.com/dschach/semantic-release-playground/commit/aaf920692d688d8e19ffbef8f2735fd0cc660031)
-- feat: add version.txt [`f0db478`](https://github.com/dschach/semantic-release-playground/commit/f0db478b042e2a672210d4ce44c8036aecc84933)
-
 ## v1.0.0 - 2023-03-15
 
 ### Merged
