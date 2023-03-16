@@ -18,6 +18,7 @@ docs/assets/*.js
 *-meta.xml
 data/
 pmd/
+*.md
 
 # Exclude project config
 sfdx-project.json
