@@ -5,12 +5,28 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [Unreleased](https://github.com/dschach/semantic-release-playground/compare/v1.0.0...HEAD)
+## [1.0.1](https://github.com/dschach/semantic-release-playground/compare/v1.0.0...v1.0.1) (2023-03-16)
 
-### Commits
 
-- fix(auto-changelog): include commits [`aaf9206`](https://github.com/dschach/semantic-release-playground/commit/aaf920692d688d8e19ffbef8f2735fd0cc660031)
-- feat: add version.txt [`f0db478`](https://github.com/dschach/semantic-release-playground/commit/f0db478b042e2a672210d4ce44c8036aecc84933)
+### Bug Fixes
+
+* **auto-changelog:** Include commits ([aaf9206](https://github.com/dschach/semantic-release-playground/commit/aaf920692d688d8e19ffbef8f2735fd0cc660031))
+
+
+### Chores
+
+* Changelog 1.0.0 ([721aece](https://github.com/dschach/semantic-release-playground/commit/721aecedf5de7ba10f551dc5aa444f8995d14376))
+
+
+### Build System
+
+* **r-p:** Set initial versions ([b4515fb](https://github.com/dschach/semantic-release-playground/commit/b4515fb33770bd8c56289b37c64e924b45181c09))
+
+
+### Continuous Integration
+
+* Automate and simplify workflows ([91ff15b](https://github.com/dschach/semantic-release-playground/commit/91ff15bbe9c8ce908e87a2ae0ff501028c890b28))
+* **r-p:** Add GitHub token ([46b1c8c](https://github.com/dschach/semantic-release-playground/commit/46b1c8c9722cfec46537f8c2dd7817de7bf3da23))
 
 ## v1.0.0 - 2023-03-15
 
