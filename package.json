@@ -50,7 +50,7 @@
 		"lint-staged": "^13.2.1",
 		"marked": "^4.3.0",
 		"prettier": "^2.8.8",
-		"prettier-plugin-apex": "^1.12.0",
+		"prettier-plugin-apex": "^1.13.0",
 		"release-please": "^15.10.4",
 		"semantic-release": "^21.0.1"
 	},
