@@ -9,10 +9,13 @@ jobs:
   pull-request-title-change:
     runs-on: ubuntu-latest
     steps:
-    - name: 'Read title'
-      id: get-title
-      #shell: bash
-      run: |
-        prtitle=${{ github.event.pull_request.title }}
-        echo "PR title"
-        echo $prtitle
+      # Checkout the source code
+      - name: 'Checkout source code'
+        uses: actions/checkout@v4
+      - name: 'Read title'
+        id: get-title
+        #shell: bash
+        run: |
+          prtitle=${{ github.event.pull_request.title }}
+          echo "PR title"
+          echo $prtitle
