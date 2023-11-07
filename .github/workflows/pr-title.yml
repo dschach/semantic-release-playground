@@ -18,4 +18,5 @@ jobs:
         run: |
           prtitle=${{ github.event.pull_request.title }}
           echo "PR title"
-          echo $prtitle
+          echo $prtitl
+          
