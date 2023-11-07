@@ -11,7 +11,7 @@ jobs:
     steps:
     - name: 'Read title'
       id: get-title
-      shell: bash
+      #shell: bash
       run: |
         pr_title = ${{ github.event.pull_request.title }}
         echo "PR title"
