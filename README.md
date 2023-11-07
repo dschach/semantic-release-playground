@@ -1,4 +1,4 @@
-# David Schach base repo for sfdx
+# David Schach semantic release playground
 
 ## ToDo items
 
