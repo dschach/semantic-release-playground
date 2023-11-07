@@ -1,0 +1,18 @@
+# Unique name for this workflow
+name: PR name change
+# Definition when the workflow should run
+on: pull_request_target
+permissions:
+  pull-requests: write
+  contents: write
+jobs:
+  pull-request-title-change:
+    runs-on: ubuntu-latest
+    steps:
+    - name: 'Read title'
+      id: get-title
+      shell: bash
+      run: |
+        pr_title = $github.event.pull_request.title
+        echo "PR title";
+        echo pr_title
