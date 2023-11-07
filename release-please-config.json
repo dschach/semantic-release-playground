@@ -20,6 +20,7 @@
 	"extra-files": [{ "type": "json", "path": "package.json", "jsonpath": "$.version" }],
 	"plugins": [{ "type": "sentence-case" }],
 	"last-release-sha": "f0db478b042e2a672210d4ce44c8036aecc84933",
+	"separate-pull-requests": true,
 	"changelog-path": "CHANGELOG.md",
 	"changelog-sections": [
 		{ "type": "feat", "section": "Features", "hidden": false },
