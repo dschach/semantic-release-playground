@@ -5,6 +5,23 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [2.0.0](https://github.com/dschach/semantic-release-playground/compare/v1.0.3...v2.0.0) (2023-11-07)
+
+
+### ⚠ BREAKING CHANGES
+
+* **utils:** encode method no longer throws.
+
+### Features
+
+* Adds v4 UUID to crypto ([#149](https://github.com/dschach/semantic-release-playground/issues/149)) ([32d036e](https://github.com/dschach/semantic-release-playground/commit/32d036ee3aa5f402190b31bf67d066ccf4ada310))
+* **utils:** Update encode to support unicode ([32d036e](https://github.com/dschach/semantic-release-playground/commit/32d036ee3aa5f402190b31bf67d066ccf4ada310))
+
+
+### Bug Fixes
+
+* **utils:** Unicode no longer throws exception ([32d036e](https://github.com/dschach/semantic-release-playground/commit/32d036ee3aa5f402190b31bf67d066ccf4ada310))
+
 ## [1.0.3](https://github.com/dschach/semantic-release-playground/compare/v1.0.2...v1.0.3) (2023-11-07)
 
 
