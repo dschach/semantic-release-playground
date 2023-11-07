@@ -15,8 +15,10 @@ jobs:
       - name: 'Read title'
         id: get-title
         #shell: bash
+        env: 
+          TITLE: ${{ github.event.pull_request.title }}
         run: |
-          echo "${{ github.event.pull_request.title }}" >> $PR_TITLE
+          echo $TITLE
           echo "PR title"
-          echo $PR_TITLE
+          echo $TITLE
           
