@@ -13,6 +13,6 @@ jobs:
       id: get-title
       #shell: bash
       run: |
-        pr_title = ${{ github.event.pull_request.title }}
+        pr_title=${{ github.event.pull_request.title }}
         echo "PR title"
         echo $pr_title
