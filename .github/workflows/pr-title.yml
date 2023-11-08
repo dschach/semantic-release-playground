@@ -33,10 +33,10 @@ jobs:
         run: echo "fragment=${TITLE##*:}" >> $GITHUB_OUTPUT
       # Another step
       - name: Test variable
-        env:
-          TITLE_NEW:  ("deps(" + "packagename" + "):" + "${{ steps.split-title.outputs.fragment }}")
+        #env:
+        #  TITLE_NEW:  ("deps(" + "packagename" + "):" + "${{ steps.split-title.outputs.fragment }}")
         run: |
-          echo "New Title is ${{ env.TITLE_NEW }}"
-        # $title_new = "deps(" + "packagename" + "):" + "${{ steps.split-title.outputs.fragment }}"
+          echo "New Title is ${{ steps.split-title.outputs.fragment }}"
+          pr_title = $("deps(" + "packagename" + "):" + "${{ steps.split-title.outputs.fragment }}")
         #echo "$title_new"
       # gh pr edit --title "$title_new"
