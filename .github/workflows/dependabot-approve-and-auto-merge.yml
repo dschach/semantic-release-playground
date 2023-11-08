@@ -17,7 +17,7 @@ jobs:
 
       - name: 'Split title and update'
         id: split-title
-        if: ${{ ! contains(github.event.pull_request.title, '):' ) && contains(github.event.pull_request.title, ':')  && steps.dependabot-fetch.outcome != 'success' }}
+        if: ${{ ! contains(github.event.pull_request.title, '):' ) && contains(github.event.pull_request.title, ':')  && steps.dependabot-fetch.outcome == 'success' }}
         env:
           TITLE: ${{ github.event.pull_request.title }}
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
