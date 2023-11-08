@@ -32,7 +32,7 @@ jobs:
           contains( ${{env.TITLE}}, ':')
         run: |
           echo "title_pt2=${TITLE##*:}" >> $GITHUB_OUTPUT
-          echo "title_pt1=${TITLE//:/ }" >> $GITHUB_OUTPUT
+          echo "title_pt1=${TITLE%*:}" >> $GITHUB_OUTPUT
       # Another step
       - name: Test variable
         #env:
@@ -45,7 +45,8 @@ jobs:
           #echo "title_pt2=${env.TITLE##*:}" #>> $splitTitle
           #echo "title_pt1=${env.TITLE//:/ }" #>> $prefix
           gh pr checkout "$PR_URL" # sets the upstream metadata for `gh pr status`
-          echo "Split Title is ${{ steps.split-title.outputs.title_pt1 }} ${{ steps.split-title.outputs.title_pt2 }}"
+          echo "Split Title pt1 is ${{ steps.split-title.outputs.title_pt1 }}"
+          echo "Split Title pt2 is ${{ steps.split-title.outputs.title_pt2 }}"
           part1="${{ steps.split-title.outputs.title_pt1 }}("
           packagename="eslint"
           part2="):${{ steps.split-title.outputs.title_pt2 }}"
