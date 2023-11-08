@@ -36,7 +36,14 @@ jobs:
         #env:
         #  TITLE_NEW:  ("deps(" + "packagename" + "):" + "${{ steps.split-title.outputs.fragment }}")
         run: |
-          echo "New Title is ${{ steps.split-title.outputs.fragment }}"
-          pr_title = $("deps(" + "packagename" + "):" + "${{ steps.split-title.outputs.fragment }}")
+          echo "Split Title is ${{ steps.split-title.outputs.fragment }}"
+          part1="deps("
+          part2="):"
+          packagename="eslint"
+          echo "part1 is $part1"
+          echo "part2 is $part2"
+          echo "packagename is $packagename"
+          pr_title = "$part1$packagename$part2${{ steps.split-title.outputs.fragment }}""
+          echo "$pr_title"
         #echo "$title_new"
       # gh pr edit --title "$title_new"
