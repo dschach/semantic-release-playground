@@ -1,0 +1,51 @@
+# Unique name for this workflow
+name: PR name change on PR
+# Definition when the workflow should run
+on:
+  # pull_request: #_target:
+  workflow_dispatch:
+permissions:
+  pull-requests: write
+  contents: write
+jobs:
+  pull-request-title-change:
+    runs-on: ubuntu-latest
+    steps:
+      # Checkout the source code
+      - name: 'Checkout source code'
+        uses: actions/checkout@v4
+      - name: 'Split title'
+        id: split-title
+        env:
+          TITLE: ${{ github.event.pull_request.title }}
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          PR_URL: ${{github.event.pull_request.html_url}}
+        if: ${{ ! contains(github.event.pull_request.title, '):' ) && contains(github.event.pull_request.title, ':') }}
+        run: |
+          echo $TITLE  
+          title_pt2="${TITLE##*:}"
+          title_pt1="${TITLE%%:*}"
+          gh pr checkout "$PR_URL" # sets the upstream metadata for `gh pr status`
+          packagename="eslint"
+          echo "packagename is $packagename"
+          echo "$title_pt1"
+          echo "$title_pt2"
+          parensOpen="("
+          parensClose="):"
+          pr_title=$title_pt1$parensOpen$packagename$parensClose$title_pt2
+          echo "FINAL TITLE: $pr_title"
+          gh pr edit "$PR_URL" --title "$pr_title"
+
+        #echo "title_pt2=${TITLE##*:}" >> $GITHUB_OUTPUT
+        #echo "title_pt1=${TITLE%%:*}" >> $GITHUB_OUTPUT
+        #echo "Split Title pt1 is ${{ steps.split-title.outputs.title_pt1 }}"
+        #echo "Split Title pt2 is ${{ steps.split-title.outputs.title_pt2 }}"
+        #part1="${{ steps.split-title.outputs.title_pt1 }}("
+
+        #part2="):${{ steps.split-title.outputs.title_pt2 }}"
+
+        #pr_title="${title_pt1}$parensOpen${packagename}$parensClose${title_pt2}"
+        #echo "part1 is $part1"
+        #echo "part2 is $part2"
+        #pr_title="$part1$packagename$part2"
+        #pr_title="${{ steps.split-title.outputs.title_pt1 }}($packagename):${{ steps.split-title.outputs.title_pt2 }}"
