@@ -31,11 +31,13 @@ jobs:
         run: |
           #echo "title_pt2=${TITLE##*:}" >> $GITHUB_OUTPUT
           #echo "title_pt1=${TITLE%%:*}" >> $GITHUB_OUTPUT
-          title_pt2=${TITLE##*:}"
-          title_pt1=${TITLE%%:*}"
+          title_pt2="${TITLE##*:}"
+          title_pt1="${TITLE%%:*}"
           gh pr checkout "$PR_URL" # sets the upstream metadata for `gh pr status`
           packagename="eslint"
           echo "packagename is $packagename"
+          echo "$title_pt1"
+          echo "$title_pt2"
           parensOpen="("
           parensClose="):"
           pr_title="${title_pt1}$parensOpen${packagename}$parensClose${title_pt2}"
