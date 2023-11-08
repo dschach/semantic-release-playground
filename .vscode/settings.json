@@ -5,7 +5,7 @@
     "**/.sfdx": true
   },
   "salesforcedx-vscode-core.retrieve-test-code-coverage": true,
-	"apexPMD.enableCache": true,
+	"apexPMD.enableCache": false,
 	"apexPMD.rulesets": [
 		"pmd/ruleset.xml"
 	],
@@ -16,7 +16,6 @@
 	"apexPMD.runOnFileSave": true,
 	"apexPMD.showErrors": true,
 	"editor.bracketPairColorization.enabled": true,
-	"editor.defaultFormatter": "redhat.vscode-yaml",
 	"editor.formatOnSave": true,
 	"editor.guides.bracketPairs": "active",
 	"editor.insertSpaces": false,
@@ -32,6 +31,11 @@
 		"editor.formatOnSave": false
 	},
 	"[yaml]": {
-		"editor.defaultFormatter": "redhat.vscode-yaml"
-	}
+		"editor.defaultFormatter": "esbenp.prettier-vscode"
+	},
+	"[github-actions-workflow]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode"
+	},
+	"yaml.format.singleQuote": true,
+	"editor.defaultFormatter": "esbenp.prettier-vscode"
 }
