@@ -23,7 +23,7 @@ jobs:
         run: |
           echo $TITLE
           echo "PR title"
-          echo $TITLE
+          echo "What is the $TITLE"
       - name: 'Check if can split'
         env: 
           TITLE: ${{ github.event.pull_request.title }}
@@ -35,5 +35,7 @@ jobs:
         id: split-title
         env: 
           TITLE: ${{ github.event.pull_request.title }}
-        run: echo ""
+        run: |
+          echo $TITLE > ./PRTITLE.txt
+          body=$(awk -F:)
           

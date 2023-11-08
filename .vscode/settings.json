@@ -33,5 +33,6 @@
 	},
 	"[yaml]": {
 		"editor.defaultFormatter": null
-	}
+	},
+	"yaml.format.singleQuote": true
 }
