@@ -1,5 +1,5 @@
 # Unique name for this workflow
-name: PR name change
+name: PR name change on PR
 # Definition when the workflow should run
 on:
   pull_request_target:
@@ -9,7 +9,6 @@ permissions:
   contents: write
 jobs:
   pull-request-title-change:
-    if: contains( ${{ github.event.pull_request.title }}, ':')
     runs-on: ubuntu-latest
     steps:
       # Checkout the source code
