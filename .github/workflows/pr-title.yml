@@ -45,5 +45,4 @@ jobs:
           echo "packagename is $packagename"
           pr_title="$part1$packagename$part2${{ steps.split-title.outputs.fragment }}"
           echo "$pr_title"
-        #echo "$title_new"
-      # gh pr edit --title "$title_new"
+          gh pr edit --title "$pr_title"
