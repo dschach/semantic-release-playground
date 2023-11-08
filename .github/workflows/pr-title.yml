@@ -36,10 +36,7 @@ jobs:
           echo "packagename is $packagename"
           echo "$title_pt1"
           echo "$title_pt2"
-          #parensOpen="("
-          #parensClose="):"
           pr_title=format('{0}\({1}\):{2}', $title_pt1, $packagename, $title_pt2)
-          #pr_title="${title_pt1}$parensOpen${packagename}$parensClose${title_pt2}"
           echo "FINAL TITLE: $pr_title"
           gh pr edit "$PR_URL" --title "$pr_title"
 
@@ -50,6 +47,9 @@ jobs:
         #part1="${{ steps.split-title.outputs.title_pt1 }}("
 
         #part2="):${{ steps.split-title.outputs.title_pt2 }}"
+        #parensOpen="("
+        #parensClose="):"
+        #pr_title="${title_pt1}$parensOpen${packagename}$parensClose${title_pt2}"
         #echo "part1 is $part1"
         #echo "part2 is $part2"
         #pr_title="$part1$packagename$part2"
