@@ -34,5 +34,8 @@
 	"[yaml]": {
 		"editor.defaultFormatter": null
 	},
-	"yaml.format.singleQuote": true
+	"yaml.format.singleQuote": true,
+	"[github-actions-workflow]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode"
+	}
 }

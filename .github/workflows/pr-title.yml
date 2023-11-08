@@ -1,7 +1,7 @@
 # Unique name for this workflow
 name: PR name change
 # Definition when the workflow should run
-on: 
+on:
   pull_request: #_target
   workflow_dispatch:
 
@@ -18,7 +18,7 @@ jobs:
       - name: 'Read title'
         id: get-title
         #shell: bash
-        env: 
+        env:
           TITLE: ${{ github.event.pull_request.title }}
         run: |
           echo $TITLE
@@ -26,27 +26,32 @@ jobs:
           echo "What is the $TITLE"
       - name: 'Split title'
         id: split-title
-        env: 
+        env:
           TITLE: ${{ github.event.pull_request.title }}
         if: |
-          contains( ${{env.TITLE}}, ':') == 'true'
-        run: echo "fragment=${TITLE##*:}" >> $GITHUB_OUTPUT
+          contains( ${{env.TITLE}}, ':')
+        run: |
+          echo "title_pt2=${env.TITLE##*:}" >> $GITHUB_OUTPUT
+          echo "title_pt1=${env.TITLE//:/ }" >> $GITHUB_OUTPUT
       # Another step
       - name: Test variable
         #env:
-        #  TITLE_NEW:  ("deps(" + "packagename" + "):" + "${{ steps.split-title.outputs.fragment }}")
+        #  TITLE_NEW:  ("deps(" + "packagename" + "):" + "${{ steps.split-title.outputs.title_pt2 }}")
         env:
+          #TITLE: ${{ github.event.pull_request.title }}
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           PR_URL: ${{github.event.pull_request.html_url}}
         run: |
+          # echo "title_pt2=${TITLE##*:}" >> $splitTitle
+          # echo "title_pt1=${TITLE//:/ }" >> $prefix
           gh pr checkout "$PR_URL" # sets the upstream metadata for `gh pr status`
-          echo "Split Title is ${{ steps.split-title.outputs.fragment }}"
-          part1="deps("
-          part2="):"
+          echo "Split Title is ${{ steps.split-title.outputs.title_pt1 }} ${{ steps.split-title.outputs.title_pt2 }}"
+          part1="${{ steps.split-title.outputs.title_pt1 }}("
           packagename="eslint"
+          part2="):${{ steps.split-title.outputs.title_pt2 }}"
           echo "part1 is $part1"
           echo "part2 is $part2"
           echo "packagename is $packagename"
-          pr_title="$part1$packagename$part2${{ steps.split-title.outputs.fragment }}"
+          pr_title="$part1$packagename$part2"
           echo "$pr_title"
           gh pr edit "$PR_URL" --title "$pr_title"
