@@ -35,6 +35,6 @@ jobs:
       - name: Test variable
         run: |
           echo "${{ steps.split-title.outputs.fragment }}"
-          title_new = "deps(" + "packagename" + "):" + "${{ steps.split-title.outputs.fragment }}"
+          $title_new = "deps(" + "packagename" + "):" + "${{ steps.split-title.outputs.fragment }}"
           echo "$title_new"
       # gh pr edit --title "$title_new"
