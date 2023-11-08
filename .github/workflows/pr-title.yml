@@ -27,7 +27,7 @@ jobs:
           TITLE: ${{ github.event.pull_request.title }}
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           PR_URL: ${{github.event.pull_request.html_url}}
-        if: contains(github.event.pull_request.title, ':') && ${{ ! contains(github.event.pull_request.title, '):' ) }}
+        if: ${{ ! contains(github.event.pull_request.title, '):' ) && contains(github.event.pull_request.title, ':') }}
         run: |
           title_pt2="${TITLE##*:}"
           title_pt1="${TITLE%%:*}"
