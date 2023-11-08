@@ -34,6 +34,6 @@ jobs:
       # Another step
       - name: Test variable
         run: |
-          echo ${{ steps.split-title.outputs.fragment }}
+          echo "${{ steps.split-title.outputs.fragment }}"
           
           # gh pr edit --title format($newTitle, ${strarr[0]}, ${strarr[1]}, ${strarr[2]})
