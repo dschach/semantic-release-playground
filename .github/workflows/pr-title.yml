@@ -42,8 +42,8 @@ jobs:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           PR_URL: ${{github.event.pull_request.html_url}}
         run: |
-          # echo "title_pt2=${TITLE##*:}" >> $splitTitle
-          # echo "title_pt1=${TITLE//:/ }" >> $prefix
+          echo "title_pt2=${env.TITLE##*:}" #>> $splitTitle
+          echo "title_pt1=${env.TITLE//:/ }" #>> $prefix
           gh pr checkout "$PR_URL" # sets the upstream metadata for `gh pr status`
           echo "Split Title is ${{ steps.split-title.outputs.title_pt1 }} ${{ steps.split-title.outputs.title_pt2 }}"
           part1="${{ steps.split-title.outputs.title_pt1 }}("
