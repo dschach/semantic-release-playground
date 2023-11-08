@@ -1,10 +1,12 @@
 #!/bin/bash
 
-TITLE="my:new car"
+TITLE="deps: Bump eslint from 8.52.0 to 8.53.0 (PR #42)"
 
-awk '{ split($0, arr, ":"); print arr}
+awk '{ split($0, arr, ":"); print arr}'
 
 newTitle="{0}({1}):{2}"
+
+packageName = "eslint"
 
 awk -F: '{print {1} "(" $TITLE "): "{2}}' new
 
