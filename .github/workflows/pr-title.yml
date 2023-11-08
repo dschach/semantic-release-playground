@@ -28,7 +28,7 @@ jobs:
         env: 
           TITLE: ${{ github.event.pull_request.title }}
         if: |
-          (contains( env.TITLE, ':') != 'true')
+          (contains( env.TITLE, ' ') != 'true')
          # (contains( github.event.pull_request.title, ':') != 'true')
         run: exit 0;
       - name: 'Split title'
@@ -36,6 +36,6 @@ jobs:
         env: 
           TITLE: ${{ github.event.pull_request.title }}
         run: |
-          echo $TITLE > ./PRTITLE.txt
-          body=$(awk -F:)
-          
+          newTitle="{0}({1}):{2}"
+          readarray -d " " -t strarr <<< "$TITLE"
+          gh pr edit --title format($newTitle, ${strarr[0]}, ${strarr[1]}, ${strarr[2]})
