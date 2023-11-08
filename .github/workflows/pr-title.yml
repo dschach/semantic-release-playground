@@ -38,14 +38,7 @@ jobs:
 
         #echo "title_pt2=${TITLE##*:}" >> $GITHUB_OUTPUT
         #echo "title_pt1=${TITLE%%:*}" >> $GITHUB_OUTPUT
-        #echo "Split Title pt1 is ${{ steps.split-title.outputs.title_pt1 }}"
-        #echo "Split Title pt2 is ${{ steps.split-title.outputs.title_pt2 }}"
-        #part1="${{ steps.split-title.outputs.title_pt1 }}("
-
-        #part2="):${{ steps.split-title.outputs.title_pt2 }}"
-
         #pr_title="${title_pt1}$parensOpen${packagename}$parensClose${title_pt2}"
         #echo "part1 is $part1"
         #echo "part2 is $part2"
         #pr_title="$part1$packagename$part2"
-        #pr_title="${{ steps.split-title.outputs.title_pt1 }}($packagename):${{ steps.split-title.outputs.title_pt2 }}"
