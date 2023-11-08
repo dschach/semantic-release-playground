@@ -9,10 +9,30 @@ jobs:
   pull-request-title-change:
     runs-on: ubuntu-latest
     steps:
-    - name: 'Read title'
-      id: get-title
-      #shell: bash
-      run: |
-        prtitle=${{ github.event.pull_request.title }}
-        echo "PR title"
-        echo $prtitle
+      # Checkout the source code
+      - name: 'Checkout source code'
+        uses: actions/checkout@v4
+      - name: 'Read title'
+        id: get-title
+        #shell: bash
+        env: 
+          TITLE: ${{ github.event.pull_request.title }}
+        run: |
+          echo $TITLE
+          echo "PR title"
+          echo "What is the $TITLE"
+      - name: 'Check if can split'
+        env: 
+          TITLE: ${{ github.event.pull_request.title }}
+        if: |
+          (contains( env.TITLE, ' ') != 'true')
+         # (contains( github.event.pull_request.title, ':') != 'true')
+        run: exit 0;
+      - name: 'Split title'
+        id: split-title
+        env: 
+          TITLE: ${{ github.event.pull_request.title }}
+        run: |
+          newTitle=$"{0}({1}):{2}"
+          readarray -d " " -t strarr <<< "$TITLE"
+          gh pr edit --title format($newTitle, ${strarr[0]}, ${strarr[1]}, ${strarr[2]})
