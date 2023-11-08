@@ -33,15 +33,19 @@ jobs:
           echo "title_pt2=${TITLE##*:}" >> $GITHUB_OUTPUT
           echo "title_pt1=${TITLE%%:*}" >> $GITHUB_OUTPUT
           gh pr checkout "$PR_URL" # sets the upstream metadata for `gh pr status`
-          echo "Split Title pt1 is ${{ steps.split-title.outputs.title_pt1 }}"
-          echo "Split Title pt2 is ${{ steps.split-title.outputs.title_pt2 }}"
-          part1="${{ steps.split-title.outputs.title_pt1 }}("
           packagename="eslint"
-          part2="):${{ steps.split-title.outputs.title_pt2 }}"
-          echo "part1 is $part1"
-          echo "part2 is $part2"
           echo "packagename is $packagename"
-          #pr_title="$part1$packagename$part2"
-          pr_title="${{ steps.split-title.outputs.title_pt1 }}($packagename):${{ steps.split-title.outputs.title_pt2 }}"
+
+          pr_title=${title_pt1}(packagename):${title_pt2}
           echo "FINAL TITLE: $pr_title"
           gh pr edit "$PR_URL" --title "$pr_title"
+
+        #echo "Split Title pt1 is ${{ steps.split-title.outputs.title_pt1 }}"
+        #echo "Split Title pt2 is ${{ steps.split-title.outputs.title_pt2 }}"
+        #part1="${{ steps.split-title.outputs.title_pt1 }}("
+
+        #part2="):${{ steps.split-title.outputs.title_pt2 }}"
+        #echo "part1 is $part1"
+        #echo "part2 is $part2"
+        #pr_title="$part1$packagename$part2"
+        #pr_title="${{ steps.split-title.outputs.title_pt1 }}($packagename):${{ steps.split-title.outputs.title_pt2 }}"
