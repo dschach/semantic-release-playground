@@ -1,7 +1,10 @@
 # Unique name for this workflow
 name: PR name change
 # Definition when the workflow should run
-on: pull_request_target
+on: 
+  pull_request: #_target
+  workflow_dispatch:
+
 permissions:
   pull-requests: write
   contents: write
@@ -21,4 +24,16 @@ jobs:
           echo $TITLE
           echo "PR title"
           echo $TITLE
+      - name: 'Check if can split'
+        env: 
+          TITLE: ${{ github.event.pull_request.title }}
+        if: |
+          (contains( env.TITLE, ':') != 'true')
+         # (contains( github.event.pull_request.title, ':') != 'true')
+        run: exit 0;
+      - name: 'Split title'
+        id: split-title
+        env: 
+          TITLE: ${{ github.event.pull_request.title }}
+        run: echo ""
           
