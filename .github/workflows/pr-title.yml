@@ -35,6 +35,8 @@ jobs:
       - name: Test variable
         #env:
         #  TITLE_NEW:  ("deps(" + "packagename" + "):" + "${{ steps.split-title.outputs.fragment }}")
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           echo "Split Title is ${{ steps.split-title.outputs.fragment }}"
           part1="deps("
