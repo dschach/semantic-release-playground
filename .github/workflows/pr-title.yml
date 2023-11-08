@@ -2,14 +2,14 @@
 name: PR name change
 # Definition when the workflow should run
 on:
-  pull_request: #_target
+  pull_request_target:
   workflow_dispatch:
-
 permissions:
   pull-requests: write
   contents: write
 jobs:
   pull-request-title-change:
+    if: contains( ${{ github.event.pull_request.title }}, ':')
     runs-on: ubuntu-latest
     steps:
       # Checkout the source code
@@ -21,27 +21,17 @@ jobs:
         env:
           TITLE: ${{ github.event.pull_request.title }}
         run: |
-          echo $TITLE
-          echo "PR title"
-          echo "What is the $TITLE"
+          echo $TITLE" Read"
       - name: 'Split title'
         id: split-title
         env:
           TITLE: ${{ github.event.pull_request.title }}
-        if: |
-          contains( ${{env.TITLE}}, ':')
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          PR_URL: ${{github.event.pull_request.html_url}}
+        if: contains( ${{ github.event.pull_request.title }}, ':') && !contains(${{ github.event.pull_request.title }}, '):' )
         run: |
           echo "title_pt2=${TITLE##*:}" >> $GITHUB_OUTPUT
           echo "title_pt1=${TITLE%%:*}" >> $GITHUB_OUTPUT
-      # Another step
-      - name: Test variable
-        #env:
-        #  TITLE_NEW:  ("deps(" + "packagename" + "):" + "${{ steps.split-title.outputs.title_pt2 }}")
-        env:
-          #TITLE: ${{ github.event.pull_request.title }}
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          PR_URL: ${{github.event.pull_request.html_url}}
-        run: |
           gh pr checkout "$PR_URL" # sets the upstream metadata for `gh pr status`
           echo "Split Title pt1 is ${{ steps.split-title.outputs.title_pt1 }}"
           echo "Split Title pt2 is ${{ steps.split-title.outputs.title_pt2 }}"
