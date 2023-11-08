@@ -29,14 +29,11 @@ jobs:
         env: 
           TITLE: ${{ github.event.pull_request.title }}
         if: |
-          (contains( ${{env.TITLE}}, ':') == 'true')
-        run: echo "::set-output name=fragment::${TITLE##*:}"
+          contains( ${{env.TITLE}}, ':') == 'true'
+        run: echo "fragment=${TITLE##*:}" >> $GITHUB_OUTPUT
       # Another step
       - name: Test variable
         run: |
           echo ${{ steps.split-title.outputs.fragment }}
           
-          # echo "::set-output name=fragment::${BRANCH##*/}"
-          # newTitle=$"{0}({1}):{2}"
-          # readarray -d " " -t strarr <<< "$TITLE"
           # gh pr edit --title format($newTitle, ${strarr[0]}, ${strarr[1]}, ${strarr[2]})
