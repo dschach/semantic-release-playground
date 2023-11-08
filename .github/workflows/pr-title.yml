@@ -14,13 +14,6 @@ jobs:
       # Checkout the source code
       - name: 'Checkout source code'
         uses: actions/checkout@v4
-      - name: 'Read title'
-        id: get-title
-        #shell: bash
-        env:
-          TITLE: ${{ github.event.pull_request.title }}
-        run: |
-          echo $TITLE
       - name: 'Split title'
         id: split-title
         env:
@@ -29,6 +22,7 @@ jobs:
           PR_URL: ${{github.event.pull_request.html_url}}
         if: ${{ ! contains(github.event.pull_request.title, '):' ) && contains(github.event.pull_request.title, ':') }}
         run: |
+          echo $TITLE  
           title_pt2="${TITLE##*:}"
           title_pt1="${TITLE%%:*}"
           gh pr checkout "$PR_URL" # sets the upstream metadata for `gh pr status`
