@@ -2,7 +2,7 @@
 name: PR name change on PR
 # Definition when the workflow should run
 on:
-  pull_request_target:
+  pull_request: #_target:
   workflow_dispatch:
 permissions:
   pull-requests: write
@@ -34,7 +34,6 @@ jobs:
           gh pr checkout "$PR_URL" # sets the upstream metadata for `gh pr status`
           packagename="eslint"
           echo "packagename is $packagename"
-
           pr_title=${title_pt1}(packagename):${title_pt2}
           echo "FINAL TITLE: $pr_title"
           gh pr edit "$PR_URL" --title "$pr_title"
