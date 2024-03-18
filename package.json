@@ -55,7 +55,7 @@
 		"prettier": "^3.2.5",
 		"prettier-plugin-apex": "^2.1.0",
 		"release-please": "^16.10.1",
-		"semantic-release": "^23.0.3"
+		"semantic-release": "^23.0.4"
 	},
 	"lint-staged": {
 		"force-app/**/*.{cls,cmp,component,css,html,js,json,md,page,trigger,yaml,yml}": [
