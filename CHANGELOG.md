@@ -5,6 +5,43 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.0.5](https://github.com/dschach/semantic-release-playground/compare/v1.0.4...v1.0.5) (2024-06-25)
+
+
+### Build System
+
+* **@lwc/eslint-plugin-lwc:** Bump @lwc/eslint-plugin-lwc from 1.7.2 to 1.8.0 ([#253](https://github.com/dschach/semantic-release-playground/issues/253)) ([35a7b38](https://github.com/dschach/semantic-release-playground/commit/35a7b389aea74db1e965ed25d66c5ac3dddc653b))
+* **@lwc/eslint-plugin-lwc:** Bump @lwc/eslint-plugin-lwc from 1.8.0 to 1.8.1 ([#255](https://github.com/dschach/semantic-release-playground/issues/255)) ([7cb6bc8](https://github.com/dschach/semantic-release-playground/commit/7cb6bc830c4a9e22516a1a33b6752899ee4aa767))
+* **@lwc/eslint-plugin-lwc:** Bump @lwc/eslint-plugin-lwc from 1.8.1 to 1.8.2 ([#278](https://github.com/dschach/semantic-release-playground/issues/278)) ([82be3a2](https://github.com/dschach/semantic-release-playground/commit/82be3a274437b3db3c880258a8880202000a8893))
+* **eslint-plugin-jest:** Bump eslint-plugin-jest from 28.2.0 to 28.3.0 ([#256](https://github.com/dschach/semantic-release-playground/issues/256)) ([7603e1f](https://github.com/dschach/semantic-release-playground/commit/7603e1f8d218a4b387e2cf131fa9039259aa80c0))
+* **eslint-plugin-jest:** Bump eslint-plugin-jest from 28.3.0 to 28.4.0 ([#257](https://github.com/dschach/semantic-release-playground/issues/257)) ([2b406dc](https://github.com/dschach/semantic-release-playground/commit/2b406dce1d2c0bef9ab559e9397cc44aca179c41))
+* **eslint-plugin-jest:** Bump eslint-plugin-jest from 28.4.0 to 28.5.0 ([#259](https://github.com/dschach/semantic-release-playground/issues/259)) ([7ae55e5](https://github.com/dschach/semantic-release-playground/commit/7ae55e577aac3ee46b48da160306d26ef330ad1a))
+* **eslint-plugin-jest:** Bump eslint-plugin-jest from 28.5.0 to 28.6.0 ([#269](https://github.com/dschach/semantic-release-playground/issues/269)) ([4e1b08e](https://github.com/dschach/semantic-release-playground/commit/4e1b08eaa61f734329e87d36104f2f5bfa23b1ac))
+* **eslint:** Bump eslint from 9.0.0 to 9.1.0 ([#249](https://github.com/dschach/semantic-release-playground/issues/249)) ([4514c62](https://github.com/dschach/semantic-release-playground/commit/4514c62a272a852656a0505b841f5a578406eed1))
+* **eslint:** Bump eslint from 9.1.0 to 9.1.1 ([#252](https://github.com/dschach/semantic-release-playground/issues/252)) ([6f7b681](https://github.com/dschach/semantic-release-playground/commit/6f7b6812cf8ef68019390dfeb1a591c6e50d41e6))
+* **eslint:** Bump eslint from 9.1.1 to 9.2.0 ([#258](https://github.com/dschach/semantic-release-playground/issues/258)) ([7d210bd](https://github.com/dschach/semantic-release-playground/commit/7d210bd6b1e5f2c2ac34966558e65f3f9e7b2336))
+* **eslint:** Bump eslint from 9.2.0 to 9.3.0 ([#262](https://github.com/dschach/semantic-release-playground/issues/262)) ([d5a17d3](https://github.com/dschach/semantic-release-playground/commit/d5a17d352f33b6779820174bb4b7822841127a1f))
+* **eslint:** Bump eslint from 9.3.0 to 9.4.0 ([#265](https://github.com/dschach/semantic-release-playground/issues/265)) ([175e683](https://github.com/dschach/semantic-release-playground/commit/175e68339ae5c52143db0902f39588db782e6df3))
+* **eslint:** Bump eslint from 9.4.0 to 9.5.0 ([#276](https://github.com/dschach/semantic-release-playground/issues/276)) ([5bd6e5a](https://github.com/dschach/semantic-release-playground/commit/5bd6e5a4280419f6ad474f8dc444e74ad7e83bcf))
+* **lint-staged:** Bump lint-staged from 15.2.2 to 15.2.4 ([#263](https://github.com/dschach/semantic-release-playground/issues/263)) ([d2e89fd](https://github.com/dschach/semantic-release-playground/commit/d2e89fd27e5837d5d71b52c551e0fb190e49b416))
+* **lint-staged:** Bump lint-staged from 15.2.4 to 15.2.5 ([#264](https://github.com/dschach/semantic-release-playground/issues/264)) ([04043e1](https://github.com/dschach/semantic-release-playground/commit/04043e1d67a23b501fd9ead0b1d91c0c2a70cfd4))
+* **lint-staged:** Bump lint-staged from 15.2.5 to 15.2.6 ([#274](https://github.com/dschach/semantic-release-playground/issues/274)) ([b261912](https://github.com/dschach/semantic-release-playground/commit/b2619120c50bce854ff6242366dfc2820b8a8c2a))
+* **lint-staged:** Bump lint-staged from 15.2.6 to 15.2.7 ([#275](https://github.com/dschach/semantic-release-playground/issues/275)) ([48ed1d4](https://github.com/dschach/semantic-release-playground/commit/48ed1d494fe6b222b55d403d3d70fd69484d0e85))
+* **marked:** Bump marked from 12.0.1 to 12.0.2 ([#248](https://github.com/dschach/semantic-release-playground/issues/248)) ([bd5067e](https://github.com/dschach/semantic-release-playground/commit/bd5067e853affcf1e9d352b9ba10f137563021f8))
+* **marked:** Bump marked from 12.0.2 to 13.0.1 ([#279](https://github.com/dschach/semantic-release-playground/issues/279)) ([9057b80](https://github.com/dschach/semantic-release-playground/commit/9057b80de1535337987f1f621149a0007e17cc61))
+* **prettier-plugin-apex:** Bump prettier-plugin-apex from 2.1.0 to 2.1.1 ([#250](https://github.com/dschach/semantic-release-playground/issues/250)) ([befad82](https://github.com/dschach/semantic-release-playground/commit/befad8269f1bacec716d3440d079ec76029d01d3))
+* **prettier-plugin-apex:** Bump prettier-plugin-apex from 2.1.1 to 2.1.2 ([#251](https://github.com/dschach/semantic-release-playground/issues/251)) ([fd05a64](https://github.com/dschach/semantic-release-playground/commit/fd05a64a0a9468a2829f7df28ff20bab84408b2b))
+* **prettier-plugin-apex:** Bump prettier-plugin-apex from 2.1.2 to 2.1.3 ([#254](https://github.com/dschach/semantic-release-playground/issues/254)) ([547a984](https://github.com/dschach/semantic-release-playground/commit/547a9845f6d705b87fa8a06ab587f432f9207481))
+* **prettier-plugin-apex:** Bump prettier-plugin-apex from 2.1.3 to 2.1.4 ([#260](https://github.com/dschach/semantic-release-playground/issues/260)) ([d5ddf0c](https://github.com/dschach/semantic-release-playground/commit/d5ddf0c27cafb011262699f8e5cbd06cd7b1b93d))
+* **prettier:** Bump prettier from 3.2.5 to 3.3.0 ([#266](https://github.com/dschach/semantic-release-playground/issues/266)) ([663bbbe](https://github.com/dschach/semantic-release-playground/commit/663bbbebd36576b34df36eb77f026a97acc78e2b))
+* **prettier:** Bump prettier from 3.3.0 to 3.3.1 ([#268](https://github.com/dschach/semantic-release-playground/issues/268)) ([3917121](https://github.com/dschach/semantic-release-playground/commit/39171210f73e949d18c1acbdb072f2d1ea223724))
+* **prettier:** Bump prettier from 3.3.1 to 3.3.2 ([#272](https://github.com/dschach/semantic-release-playground/issues/272)) ([3e12a30](https://github.com/dschach/semantic-release-playground/commit/3e12a3080a9d34dc6c129466b8a2c84cb33fa11a))
+* **release-please:** Bump release-please from 16.10.1 to 16.10.2 ([#247](https://github.com/dschach/semantic-release-playground/issues/247)) ([27ac8cf](https://github.com/dschach/semantic-release-playground/commit/27ac8cfece5de53ec0cb3e9ac25a374837826b12))
+* **release-please:** Bump release-please from 16.10.2 to 16.12.0 ([#270](https://github.com/dschach/semantic-release-playground/issues/270)) ([b9a073e](https://github.com/dschach/semantic-release-playground/commit/b9a073e2d6c01ac1195ad0dd1cef330b2ae37685))
+* **semantic-release:** Bump semantic-release from 23.0.8 to 23.1.1 ([#261](https://github.com/dschach/semantic-release-playground/issues/261)) ([f9fba0a](https://github.com/dschach/semantic-release-playground/commit/f9fba0abb4da3a31e012bcec2134f4746061a730))
+* **semantic-release:** Bump semantic-release from 23.1.1 to 24.0.0 ([#267](https://github.com/dschach/semantic-release-playground/issues/267)) ([5f462bf](https://github.com/dschach/semantic-release-playground/commit/5f462bf7f04ad0dccb31ff2ed06538266b05fe47))
+* **ws:** Bump ws from 8.14.2 to 8.17.1 ([#277](https://github.com/dschach/semantic-release-playground/issues/277)) ([cdb92e9](https://github.com/dschach/semantic-release-playground/commit/cdb92e9de5b4e4873b4971424d7cade84fdb2c43))
+
 ## [1.0.4](https://github.com/dschach/semantic-release-playground/compare/v1.0.3...v1.0.4) (2024-04-13)
 
 
