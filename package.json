@@ -40,7 +40,7 @@
 		"@salesforce/eslint-config-lwc": "^3.6.0",
 		"@salesforce/eslint-plugin-aura": "^2.1.0",
 		"@salesforce/eslint-plugin-lightning": "^1.0.0",
-		"@salesforce/sfdx-lwc-jest": "^5.1.0",
+		"@salesforce/sfdx-lwc-jest": "^6.0.1",
 		"@semantic-release/changelog": "^6.0.3",
 		"@semantic-release/git": "^10.0.1",
 		"auto-changelog": "^2.5.0",
