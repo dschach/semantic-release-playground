@@ -45,7 +45,7 @@
 		"@semantic-release/git": "^10.0.1",
 		"auto-changelog": "^2.5.0",
 		"eslint": "^9.21.0",
-		"eslint-config-prettier": "^9.1.0",
+		"eslint-config-prettier": "^10.1.0",
 		"eslint-plugin-import": "^2.31.0",
 		"eslint-plugin-jest": "^28.11.0",
 		"eslint-plugin-prettier": "^5.2.3",
